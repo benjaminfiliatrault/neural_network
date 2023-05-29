@@ -2,6 +2,7 @@
 mod utils;
 mod binary;
 mod gates;
+mod data;
 
 fn main() {
     // binary::run();

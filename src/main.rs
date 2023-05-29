@@ -1,3 +1,6 @@
+mod utils;
+mod binary;
+
 fn main() {
-    println!("Hello, world!");
+    binary::run();
 }

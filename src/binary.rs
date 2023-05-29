@@ -10,7 +10,7 @@ pub fn run() {
     let mut weight = rand_float(MAX_RANGE);
     let mut bias = rand_float(5.0);
 
-    for x in 0..500 {
+    for _ in 0..500 {
         let c = cost(weight, bias);
         let diff_weight = (cost(weight + EPS, bias) - c) / EPS;
         let diff_bias = (cost(weight, bias + EPS) - c) / EPS;

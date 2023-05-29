@@ -1,6 +1,8 @@
 mod utils;
 mod binary;
+mod gates;
 
 fn main() {
-    binary::run();
+    // binary::run();
+    gates::run();
 }

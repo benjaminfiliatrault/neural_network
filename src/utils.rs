@@ -4,3 +4,7 @@ pub fn rand_float(max: f64) -> f64 {
     let mut rng = rand::thread_rng();
     return rng.gen_range(0.0..max);
 }
+
+pub fn sigmoid(value: f64) -> f64 {
+    return 1.0 / (1.0 + f64::exp(-value));
+}

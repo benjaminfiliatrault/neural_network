@@ -1,36 +1,7 @@
-use crate::utils::{sigmoid, rand_float};
-
-// OR-gate
-const OR_GATE: [[f64; 3]; 4] = [
-    [0.0, 0.0, 0.0],
-    [1.0, 0.0, 1.0],
-    [0.0, 1.0, 1.0],
-    [1.0, 1.0, 1.0],
-];
-
-// AND-gate
-const AND_GATE: [[f64; 3]; 4] = [
-    [0.0, 0.0, 0.0],
-    [1.0, 0.0, 0.0],
-    [0.0, 1.0, 0.0],
-    [1.0, 1.0, 1.0],
-];
-
-// NAND-gate
-const NAND_GATE: [[f64; 3]; 4] = [
-    [0.0, 0.0, 1.0],
-    [1.0, 0.0, 1.0],
-    [0.0, 1.0, 1.0],
-    [1.0, 1.0, 0.0],
-];
-
-// XOR-gate
-const XOR_GATE: [[f64; 3]; 4] = [
-    [0.0, 0.0, 0.0],
-    [1.0, 0.0, 1.0],
-    [0.0, 1.0, 1.0],
-    [1.0, 1.0, 0.0],
-];
+use crate::{
+    data::AND_GATE,
+    utils::{rand_float, sigmoid},
+};
 
 const TRAIN_DATA: [[f64; 3]; 4] = AND_GATE;
 

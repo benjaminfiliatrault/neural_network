@@ -3,8 +3,10 @@ mod utils;
 mod binary;
 mod gates;
 mod data;
+mod xor;
 
 fn main() {
     // binary::run();
-    gates::run();
+    // gates::run();
+    xor::run();
 }

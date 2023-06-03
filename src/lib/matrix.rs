@@ -9,7 +9,7 @@ let xor_data: Vec<f64> = [
      0.0, 0.0, 0.0,
      0.0, 1.0, 1.0,
      1.0, 0.0, 1.0,
-     1.0, 1.0, 0.0,    
+     1.0, 1.0, 0.0,
 ];
 let xor_matrix: Matrix = { rows: 4, cols: 3, data: xor_data };
 ```
@@ -46,6 +46,10 @@ impl Matrix {
 
     /** Fill a matrix with defined value */
     pub fn fill_vec(matrix: &mut Matrix, values: Vec<f64>) {
+        assert!(
+            values.len() == (matrix.rows * matrix.cols) as usize,
+            "Values vector passed is not the same size as the Matrix"
+        );
         for i in 0..matrix.rows {
             for j in 0..matrix.cols {
                 let at = Self::at(matrix.cols, i, j);

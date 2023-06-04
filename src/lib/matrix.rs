@@ -188,7 +188,12 @@ impl Matrix {
     pub fn print(matrix: &Matrix, title: &str) {
         let trailing = 8;
         let nb_char_len = format!("{:#0.trailing$}", matrix.data[0]).chars().count();
-        let spacing = (nb_char_len + (nb_char_len / 2)) as usize;
+        let mut spacing = (nb_char_len + (nb_char_len / 2)) as usize;
+        if matrix.cols == 1 {
+            // So it's centered perfectly for a single col
+            spacing = nb_char_len * 2;
+        }
+
         let dash_nb = (nb_char_len * matrix.cols as usize) + 10;
 
         println!("\n{:^dash_nb$}", title);

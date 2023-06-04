@@ -1,8 +1,8 @@
 use rand::Rng;
 
-pub fn rand_float(max: f64) -> f64 {
+pub fn rand_float(min:f64, max: f64) -> f64 {
     let mut rng = rand::thread_rng();
-    return rng.gen_range(0.0..max);
+    return rng.gen_range(min..max);
 }
 
 pub fn sigmoid(value: f64) -> f64 {

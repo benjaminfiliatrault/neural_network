@@ -18,7 +18,7 @@ struct Xor {
     activation_2: Matrix,
 }
 
-fn xor_allow() -> Xor {
+fn xor_alloc() -> Xor {
     return Xor {
         activation_0: Matrix::allocate(1, 2),
         weights_1: Matrix::allocate(2, 2),
@@ -183,8 +183,8 @@ fn main() {
         data: train_data.split_at(2).1.to_vec(),
     };
 
-    let mut modal = xor_allow();
-    let mut gradient = xor_allow();
+    let mut modal = xor_alloc();
+    let mut gradient = xor_alloc();
 
     Matrix::fill_vec(&mut modal.activation_0, vec![0.0, 0.0]);
 
